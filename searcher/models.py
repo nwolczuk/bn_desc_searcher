@@ -86,6 +86,18 @@ class Descriptors(models.Model):
         db_table = 'descriptors'
 
 
+class Corporatives(models.Model):
+    id = models.IntegerField(blank=True, primary_key=True)
+    corporative = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return self.corporative
+
+    class Meta:
+        managed = False
+        db_table = 'corporatives'
+
+
 class DjangoAdminLog(models.Model):
     action_time = models.DateTimeField()
     object_id = models.TextField(blank=True, null=True)

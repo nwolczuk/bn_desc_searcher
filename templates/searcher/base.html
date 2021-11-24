@@ -26,6 +26,18 @@
     </head>
 
     <body>
+        
+        <div>
+            {% block title %}
+            <center>
+                <div class='my-5'>
+                    <h1>WYSZUKIWARKA DESKRYPTORÓW</h1><br/>
+                    <a href="/corporatives/">Wyszukiwarka Nazw Korporatywnych</a>
+                </div>
+            </center>
+            {% endblock %}
+        </div>
+        
         <div class='m-5'> 
             <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" method="POST">
                 {% csrf_token %}

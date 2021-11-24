@@ -1,0 +1,17 @@
+{% extends 'searcher/corporativesbase.html' %}
+
+{% block result %}
+    {% if search_query %}
+        <center>
+            <div class='my-5'>
+                <h1>You searched for "{{ search_query }}"</h1><br/>
+                {% for result in results %}
+                    {{ result }}<br/>
+                {% endfor %}
+            </div>
+            
+        </center>
+        
+    {% endif %}
+
+{% endblock %}
